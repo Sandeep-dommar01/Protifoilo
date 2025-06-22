@@ -5,7 +5,7 @@ export default function Home() {
       <section className="flex items-center justify-center min-h-screen px-4">
         <div className="text-center max-w-4xl">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-            Hi, I&apos;m <span className="text-purple-400">Sandeep Dommaraju</span>
+            Welcome to <span className="text-purple-400">My Portfolio</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8">
             Full-Stack Developer & UI/UX Designer
