@@ -45,6 +45,7 @@ jobs:
           debug: true
           script: |
             cd /var/www/portfolio
-            npm ci --production
+            npm ci
             npm run build
-            pm2 restart ecosystem.config.js
+            npm prune --production
+            pm2 reload ecosystem.config.js --update-env
