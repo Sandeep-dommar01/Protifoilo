@@ -12,6 +12,18 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Prepare remote directory
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SERVER_IP }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SERVER_SSH_KEY }}
+          port: ${{ secrets.SERVER_PORT }}
+          script: |
+            sudo rm -rf /var/www/portfolio
+            sudo mkdir -p /var/www/portfolio
+            sudo chown -R ${{ secrets.SERVER_USER }}: /var/www/portfolio
+
       - name: Copy files to server via SSH
         uses: appleboy/scp-action@v0.1.7
         with:
@@ -21,7 +33,6 @@ jobs:
           port: ${{ secrets.SERVER_PORT }}
           source: "."
           target: "/var/www/portfolio"
-          rm: true
           debug: true
 
       - name: Install dependencies and restart app
