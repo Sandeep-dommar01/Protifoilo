@@ -30,7 +30,8 @@ jobs:
           host: ${{ secrets.SERVER_IP }}
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_SSH_KEY }}
-          port: ${{ secrets.SERVER_PORT }}          source: "."
+          port: ${{ secrets.SERVER_PORT }}
+          source: "."
           target: "/var/www/portfolio"
           debug: true
 
