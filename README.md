@@ -1,4 +1,16 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio Website
+
+This is a modern [Next.js](https://nextjs.org) TypeScript portfolio project with Tailwind CSS, optimized for seamless development and Ubuntu server deployment.
+
+## Features
+
+- ✨ Modern portfolio design with gradient backgrounds
+- 🚀 Next.js 15 with Turbopack for fast development
+- 🎨 Tailwind CSS for responsive styling
+- 📱 Mobile-first responsive design
+- 🐳 Docker containerization
+- 🔧 Automated deployment scripts for Ubuntu servers
+- 🔍 ESLint configuration for code quality
 
 ## Getting Started
 
@@ -34,3 +46,27 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Docker
+
+Build and run the application in Docker:
+
+```bash
+# Build the Docker image
+docker build -t portfolio-app .
+
+# Run the container on port 3000
+docker run -p 3000:3000 portfolio-app
+```
+
+## Deployment
+
+Use the provided deployment script to build, transfer, and run on an Ubuntu server:
+
+```bash
+# Make sure the script is executable
+chmod +x scripts/deploy.sh
+
+# Run deployment (replace placeholders)
+./scripts/deploy.sh <SERVER_IP> <SSH_USER> <PATH_TO_PRIVATE_KEY>
+```
