@@ -40,6 +40,75 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Technical Skills Section */}
+      <section className="py-20 px-4 bg-slate-900">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
+            Technical Skills
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-gray-300">
+            
+            {/* Networking & Security */}
+            <div className="bg-white/5 backdrop-blur-sm rounded-lg p-6">
+              <h3 className="text-xl font-bold text-purple-400 mb-4">Networking & Security</h3>
+              <ul className="list-disc list-inside">
+                <li>Firewall Configuration (UFW), ACLs</li>
+                <li>Network Segmentation, VPN, DNS, DHCP</li>
+                <li>Packet Capture (Wireshark)</li>
+                <li>OSI Model Troubleshooting</li>
+                <li>IDS/IPS Concepts</li>
+                <li>Vulnerability Scanning (Nmap NSE)</li>
+                <li>Log Analysis (Syslog)</li>
+              </ul>
+            </div>
+
+            {/* System Administration */}
+            <div className="bg-white/5 backdrop-blur-sm rounded-lg p-6">
+              <h3 className="text-xl font-bold text-purple-400 mb-4">System Administration</h3>
+              <ul className="list-disc list-inside">
+                <li>Windows Server, Linux (Ubuntu/Kali)</li>
+                <li>Group Policy (GPO), Active Directory</li>
+                <li>Microsoft Entra (Azure AD), GSuite Admin</li>
+                <li>Endpoint Security Hardening</li>
+              </ul>
+            </div>
+
+            {/* Cloud & Virtualization */}
+            <div className="bg-white/5 backdrop-blur-sm rounded-lg p-6">
+              <h3 className="text-xl font-bold text-purple-400 mb-4">Cloud & Virtualization</h3>
+              <ul className="list-disc list-inside">
+                <li>Microsoft Azure, Basic AWS</li>
+                <li>VMware, Hyper-V</li>
+                <li>Microsoft 365 (Exchange, SharePoint, Teams, Intune)</li>
+              </ul>
+            </div>
+
+            {/* Tools & Platforms */}
+            <div className="bg-white/5 backdrop-blur-sm rounded-lg p-6">
+              <h3 className="text-xl font-bold text-purple-400 mb-4">Tools & Platforms</h3>
+              <ul className="list-disc list-inside">
+                <li>SolarWinds, Cisco Meraki</li>
+                <li>ServiceNow, Automox (Patch Management)</li>
+                <li>SQL (Basic Reporting)</li>
+                <li>Command-line tools: ping, traceroute, etc.</li>
+              </ul>
+            </div>
+
+            {/* Soft Skills */}
+            <div className="bg-white/5 backdrop-blur-sm rounded-lg p-6">
+              <h3 className="text-xl font-bold text-purple-400 mb-4">Soft Skills</h3>
+              <ul className="list-disc list-inside">
+                <li>Customer-Focused Technical Support (Tier 1–3)</li>
+                <li>Documentation & SOP Writing</li>
+                <li>Incident Response Collaboration</li>
+                <li>Asset Management</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
