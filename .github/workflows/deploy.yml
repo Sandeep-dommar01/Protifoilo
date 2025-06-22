@@ -22,6 +22,7 @@ jobs:
           source: "."
           target: "/var/www/portfolio"
           rm: true
+          debug: true
 
       - name: Install dependencies and restart app
         uses: appleboy/ssh-action@v1.0.3
@@ -30,7 +31,9 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_SSH_KEY }}
           port: ${{ secrets.SERVER_PORT }}
+          debug: true
           script: |
             cd /var/www/portfolio
             npm ci --production
+            npm run build
             pm2 restart ecosystem.config.js
