@@ -109,6 +109,38 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Professional Experience Section */}
+      <section className="mt-8">
+        <h2 className="text-2xl font-bold mb-4">Professional Experience</h2>
+
+        <div className="mb-6">
+          <h3 className="text-xl font-semibold">System Engineer</h3>
+          <p className="text-gray-600">Zensar Technologies – Hyderabad, India</p>
+          <p className="text-gray-600">May 2022 – Sep 2023</p>
+          <ul className="list-disc list-inside mt-2 text-gray-200">
+            <li>Monitored and maintained network infrastructure across global client environments, including routers, Cisco Meraki switches, and wireless access points.</li>
+            <li>Provided Level 1 technical support and basic configuration for Cisco Meraki devices (firewalls, APs, switches), ensuring secure connectivity and reliable performance.</li>
+            <li>Supported backup operations and assisted in routine restore testing procedures to validate disaster recovery capabilities.</li>
+            <li>Diagnosed network issues using tools like SolarWinds and Wireshark; conducted initial triage before escalation.</li>
+            <li>Delivered IT support for internal systems, remote users, and enterprise network resources using ServiceNow and remote access tools.</li>
+            <li>Maintained detailed technical documentation covering network topology, standards, and troubleshooting steps.</li>
+            <li>Participated in planning discussions with senior engineers to document capacity needs and contribute to infrastructure growth strategies.</li>
+            <li>Collaborated with ISPs and vendors (Verizon, AT&T, Spectrum) for resolving circuit-level and external connectivity issues.</li>
+            <li>Assisted in monthly Windows patch management using Automox and contributed to endpoint security hardening efforts.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="text-xl font-semibold">Process Associate</h3>
+          <p className="text-gray-600">Amazon India Pvt. Ltd. – Bangalore, India</p>
+          <p className="text-gray-600">Oct 2021 – May 2022</p>
+          <ul className="list-disc list-inside mt-2 text-gray-200">
+            <li>Analyzed competitor pricing using internal tools; maintained high data accuracy.</li>
+            <li>Generated Excel-based reports and collaborated with pricing analysts for decision support.</li>
+          </ul>
+        </div>
+      </section>
     </div>
   );
 }
