@@ -30,10 +30,11 @@ jobs:
           host: ${{ secrets.SERVER_IP }}
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_SSH_KEY }}
-          port: ${{ secrets.SERVER_PORT }}
-          source: "."
+          port: ${{ secrets.SERVER_PORT }}          source: "."
           target: "/var/www/portfolio"
-          debug: true      - name: Install dependencies and restart app
+          debug: true
+
+      - name: Install dependencies and restart app
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.SERVER_IP }}
