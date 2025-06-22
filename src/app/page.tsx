@@ -11,7 +11,7 @@ export default function Home() {
             Full-Stack Developer & UI/UX Designer
           </p>
           <p className="text-lg text-gray-400 mb-12 max-w-2xl mx-auto">
-            I create beautiful, functional web applications using modern technologies like React, Next.js, and TypeScript.
+            I create beautiful, functional web applications using modern technologies like React, Next.js, TypeScript, and Tailwind CSS.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
