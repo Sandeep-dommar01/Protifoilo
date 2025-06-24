@@ -6,9 +6,8 @@ export default function Projects() {
       {/* Navigation */}
       <nav className="fixed top-0 w-full bg-white/90 backdrop-blur-sm border-b border-gray-100 z-50">
         <div className="max-w-6xl mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            <Link href="/" className="font-semibold text-gray-900">
-              Sandeep Dommaraju
+          <div className="flex items-center justify-between">            <Link href="/" className="font-semibold text-gray-900">
+              Home
             </Link>
             <div className="flex space-x-8">
               <Link href="/about" className="text-gray-600 hover:text-gray-900 transition-colors">

@@ -8,7 +8,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <Link href="/" className="font-semibold text-gray-900">
-              Sandeep Dommaraju
+              Home
             </Link>
             <div className="flex space-x-8">
               <Link href="/about" className="text-gray-600 hover:text-gray-900 transition-colors">
@@ -32,7 +32,7 @@ export default function Home() {
       <section className="pt-32 pb-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-light text-gray-900 mb-6">
-            Cybersecurity Professional
+            Sandeep Dommaraju
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
             IT professional with 2+ years in network administration, system security, and threat detection. 

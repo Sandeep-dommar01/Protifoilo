@@ -6,9 +6,8 @@ export default function About() {
       {/* Navigation */}
       <nav className="fixed top-0 w-full bg-white/90 backdrop-blur-sm border-b border-gray-100 z-50">
         <div className="max-w-6xl mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            <Link href="/" className="font-semibold text-gray-900">
-              Sandeep Dommaraju
+          <div className="flex items-center justify-between">            <Link href="/" className="font-semibold text-gray-900">
+              Home
             </Link>
             <div className="flex space-x-8">
               <Link href="/about" className="text-gray-900 font-medium">
@@ -88,15 +87,13 @@ export default function About() {
                 <p className="text-gray-600 text-sm">Completed</p>
               </div>
             </div>
-          </div>
-
-          {/* Technical Skills */}
+          </div>          {/* Technical Skills */}
           <div>
             <h2 className="text-2xl font-medium text-gray-900 mb-8">Technical Skills</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-lg font-medium text-gray-900 mb-4">Networking & Security</h3>
-                <ul className="text-gray-700 space-y-1">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="bg-white border border-gray-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-blue-600 mb-4">Networking & Security</h3>
+                <ul className="text-gray-700 space-y-2">
                   <li>• Firewall Configuration (UFW), ACLs</li>
                   <li>• Network Segmentation, VPN, DNS, DHCP</li>
                   <li>• Packet Capture (Wireshark)</li>
@@ -107,9 +104,9 @@ export default function About() {
                 </ul>
               </div>
               
-              <div>
-                <h3 className="text-lg font-medium text-gray-900 mb-4">System Administration</h3>
-                <ul className="text-gray-700 space-y-1">
+              <div className="bg-white border border-gray-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-green-600 mb-4">System Administration</h3>
+                <ul className="text-gray-700 space-y-2">
                   <li>• Windows Server, Linux (Ubuntu/Kali)</li>
                   <li>• Group Policy (GPO), Active Directory</li>
                   <li>• Microsoft Entra (Azure AD), GSuite Admin</li>
@@ -117,22 +114,25 @@ export default function About() {
                 </ul>
               </div>
               
-              <div>
-                <h3 className="text-lg font-medium text-gray-900 mb-4">Cloud & Virtualization</h3>
-                <ul className="text-gray-700 space-y-1">
+              <div className="bg-white border border-gray-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-purple-600 mb-4">Cloud & Virtualization</h3>
+                <ul className="text-gray-700 space-y-2">
                   <li>• Microsoft Azure, Basic AWS</li>
                   <li>• VMware, Hyper-V</li>
                   <li>• Microsoft 365 (Exchange, SharePoint, Teams, Intune)</li>
                 </ul>
               </div>
-              
-              <div>
-                <h3 className="text-lg font-medium text-gray-900 mb-4">Tools & Platforms</h3>
-                <ul className="text-gray-700 space-y-1">
-                  <li>• SolarWinds, Cisco Meraki</li>
-                  <li>• ServiceNow, Automox (Patch Management)</li>
-                  <li>• SQL (Basic Reporting)</li>
-                  <li>• Command-line tools: ping, traceroute, netstat, dig</li>
+                <div className="bg-white border border-gray-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-orange-600 mb-4">Tools & Platforms</h3>
+                <ul className="text-gray-700 space-y-2">
+                  <li>• SolarWinds Network Monitoring</li>
+                  <li>• Cisco Meraki Dashboard</li>
+                  <li>• ServiceNow ITSM Platform</li>
+                  <li>• Automox Patch Management</li>
+                  <li>• Microsoft SCCM</li>
+                  <li>• Wireshark Protocol Analyzer</li>
+                  <li>• Nmap Network Scanner</li>
+                  <li>• PowerShell & Bash Scripting</li>
                 </ul>
               </div>
             </div>
