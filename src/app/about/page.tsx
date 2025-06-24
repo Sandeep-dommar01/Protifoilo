@@ -1,15 +1,23 @@
+'use client'
+
 import Link from 'next/link'
+import { useState } from 'react'
 
 export default function About() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
       <nav className="fixed top-0 w-full bg-white/90 backdrop-blur-sm border-b border-gray-100 z-50">
         <div className="max-w-6xl mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">            <Link href="/" className="font-semibold text-gray-900">
+          <div className="flex items-center justify-between">
+            <Link href="/" className="font-semibold text-gray-900">
               Home
             </Link>
-            <div className="flex space-x-8">
+            
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex space-x-8">
               <Link href="/about" className="text-gray-900 font-medium">
                 About
               </Link>
@@ -23,7 +31,54 @@ export default function About() {
                 Contact
               </Link>
             </div>
+
+            {/* Mobile Menu Button */}
+            <button 
+              className="md:hidden flex flex-col space-y-1"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              <span className={`block w-6 h-0.5 bg-gray-900 transition-transform ${isMenuOpen ? 'rotate-45 translate-y-1.5' : ''}`}></span>
+              <span className={`block w-6 h-0.5 bg-gray-900 transition-opacity ${isMenuOpen ? 'opacity-0' : ''}`}></span>
+              <span className={`block w-6 h-0.5 bg-gray-900 transition-transform ${isMenuOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></span>
+            </button>
           </div>
+
+          {/* Mobile Navigation Menu */}
+          {isMenuOpen && (
+            <div className="md:hidden mt-4 pb-4 border-t border-gray-100">
+              <div className="flex flex-col space-y-4 pt-4">
+                <Link 
+                  href="/about" 
+                  className="text-gray-900 font-medium"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  About
+                </Link>
+                <Link 
+                  href="/experience" 
+                  className="text-gray-600 hover:text-gray-900 transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Experience
+                </Link>
+                <Link 
+                  href="/projects" 
+                  className="text-gray-600 hover:text-gray-900 transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Projects
+                </Link>
+                <Link 
+                  href="/contact" 
+                  className="text-gray-600 hover:text-gray-900 transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Contact
+                </Link>
+              </div>
+            </div>
+          )}
         </div>
       </nav>
 
