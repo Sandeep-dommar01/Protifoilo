@@ -132,7 +132,7 @@ npm run dev
 ```
 
 4. **Open in browser**
-Navigate to [http://localhost:3000](http://localhost:3000)
+Navigate to [http://localhost:3001](http://localhost:3001)
 
 ### Available Scripts
 
@@ -175,7 +175,7 @@ graph TB
     A[GitHub Repository] -->|Push to main| B[GitHub Actions]
     B -->|SSH Deploy| C[Ubuntu 24.04 Server]
     C -->|PM2 Process| D[Next.js Application]
-    C -->|Nginx Proxy| E[Port 3000]
+    C -->|Nginx Proxy| E[Port 3001]
     C -->|ngrok Tunnel| F[Public HTTPS URL]
     G[Users] -->|HTTPS| F
     F -->|Proxy| E
@@ -192,7 +192,7 @@ graph TB
 
 ### Network Configuration
 - **SSH Access:** Custom port 436 with key authentication
-- **Internal Port:** 3000 (Next.js application)
+- **Internal Port:** 3001 (Next.js application)
 - **Public Access:** ngrok HTTPS tunnel
 - **Firewall:** UFW with restricted access
 
@@ -303,7 +303,7 @@ After=network.target
 [Service]
 Type=simple
 User=ubuntu
-ExecStart=/usr/local/bin/ngrok http 3000
+ExecStart=/usr/local/bin/ngrok http 3001
 Restart=on-failure
 RestartSec=5
 
@@ -327,7 +327,7 @@ sudo ufw status verbose
 # 436/tcp (SSH)
 # 80/tcp (HTTP)
 # 443/tcp (HTTPS)
-# 3000/tcp (Application - internal only)
+# 3001/tcp (Application - internal only)
 ```
 
 ### Application Security
@@ -352,7 +352,7 @@ RUN npm run build
 
 FROM base AS runtime
 COPY --from=build /app/.next ./.next
-EXPOSE 3000
+EXPOSE 3001
 CMD ["npm", "start"]
 ```
 
@@ -362,10 +362,10 @@ CMD ["npm", "start"]
 docker build -t portfolio-app .
 
 # Run container
-docker run -p 3000:3000 portfolio-app
+docker run -p 3001:3001 portfolio-app
 
 # Run with environment variables
-docker run -p 3000:3000 -e NODE_ENV=production portfolio-app
+docker run -p 3001:3001 -e NODE_ENV=production portfolio-app
 
 # Docker Compose (optional)
 docker-compose up -d
@@ -393,7 +393,7 @@ pm2 status
 pm2 logs portfolio
 
 # Check port availability
-sudo netstat -tulpn | grep :3000
+sudo netstat -tulpn | grep :3001
 
 # Restart application
 pm2 restart portfolio
@@ -430,8 +430,8 @@ sudo systemctl status ngrok
 pm2 status
 
 # Network diagnostics
-ss -tulpn | grep :3000
-curl -I http://localhost:3000
+ss -tulpn | grep :3001
+curl -I http://localhost:3001
 
 # System resources
 htop
