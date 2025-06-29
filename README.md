@@ -9,7 +9,7 @@ A modern, responsive portfolio website showcasing cybersecurity expertise, built
 
 ## 🌐 Live Website
 
-**Portfolio URL:** [Deployed via private Ubuntu server with ngrok tunneling]
+**Portfolio URL:** [[Deployed via private Ubuntu server with ngrok tunneling]](https://4c6c-2603-6010-f900-6fe3-369a-7b0f-9313-f0ec.ngrok-free.app/)
 
 ## 📋 Table of Contents
 
